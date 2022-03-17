@@ -5,6 +5,7 @@ import co.com.proyectoReactor.exampleProjectReactor.condicionales.Condicional;
 import co.com.proyectoReactor.exampleProjectReactor.creacion.Creacion;
 import co.com.proyectoReactor.exampleProjectReactor.filtrado.Filtrado;
 import co.com.proyectoReactor.exampleProjectReactor.model.Persona;
+import co.com.proyectoReactor.exampleProjectReactor.opmatematico.Matematico;
 import co.com.proyectoReactor.exampleProjectReactor.transformacion.Transformacion;
 import io.reactivex.Observable;
 import org.slf4j.Logger;
@@ -73,7 +74,6 @@ public class ExampleProjectReactorApplication implements CommandLineRunner {
 				.subscribe(lista -> log.info(lista.toString()));
 	}
 
-
 	// revisar a modo de debug
 	private static final Logger log = LoggerFactory.getLogger(ExampleProjectReactorApplication.class);
 
@@ -83,7 +83,7 @@ public class ExampleProjectReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Condicional condicional = new Condicional();
-		condicional.timeout();
+		Matematico mate = new Matematico();
+		mate.summarizing();
 	}
 }
