@@ -47,6 +47,7 @@ public class Transformacion {
 
 
         Flux.fromIterable(personas)
+                // el flapMap pide como retorno otro flujo de datos
                 .flatMap(p -> {
                     p.setEdad(p.getEdad() + 10);
                     return Mono.just(p);
