@@ -1,6 +1,7 @@
 package co.com.proyectoReactor.exampleProjectReactor;
 
 import co.com.proyectoReactor.exampleProjectReactor.combinacion.Combinacion;
+import co.com.proyectoReactor.exampleProjectReactor.condicionales.Condicional;
 import co.com.proyectoReactor.exampleProjectReactor.creacion.Creacion;
 import co.com.proyectoReactor.exampleProjectReactor.filtrado.Filtrado;
 import co.com.proyectoReactor.exampleProjectReactor.model.Persona;
@@ -82,7 +83,7 @@ public class ExampleProjectReactorApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Combinacion combinacion = new Combinacion();
-		combinacion.zip();
+		Condicional condicional = new Condicional();
+		condicional.timeout();
 	}
 }
