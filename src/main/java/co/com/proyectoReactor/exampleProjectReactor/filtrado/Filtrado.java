@@ -71,7 +71,20 @@ public class Filtrado {
         personas.add(new Persona(4, "Mateo", "Vlad", 24));
 
         Flux.fromIterable(personas)
-                .skip(3) //takelast
+                .skip(3)
+                .subscribe(p -> log.info(p.toString()));
+    }
+
+    public void skipLast(){
+
+        List<Persona> personas = new ArrayList<>();
+        personas.add(new Persona(1, "Lina", "Guerrero", 23));
+        personas.add(new Persona(4, "Juan", "Montes", 27));
+        personas.add(new Persona(3, "Santiago", "Vlad", 25));
+        personas.add(new Persona(4, "Mateo", "Vlad", 24));
+
+        Flux.fromIterable(personas)
+                .skipLast(3)
                 .subscribe(p -> log.info(p.toString()));
     }
 }
